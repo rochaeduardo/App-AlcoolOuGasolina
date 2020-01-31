@@ -19,12 +19,23 @@ public class MainActivity extends AppCompatActivity {
         editTextAlcool          = findViewById(R.id.editTextAlcool);
         editTextGasolina        = findViewById(R.id.editTextGasolina);
         textResultado           = findViewById(R.id.textResultado);
+
+    }
+
+    public void Limpar(View view){
+        editTextAlcool.setText("");
+        editTextGasolina.setText("");
+        textResultado.setText("");
+        textResultado.setText("Resultado");
     }
 
     public void calcularPreco(View view){
 
         String precoAlcool      = editTextAlcool.getText().toString();
         String precoGasolina      = editTextGasolina.getText().toString();
+
+        //Limpar Campos
+
 
         //Validar Campos
         Boolean campoValidados = validarCampos(precoAlcool, precoGasolina);
@@ -56,10 +67,13 @@ public class MainActivity extends AppCompatActivity {
         if(pAlcool == null || pAlcool.equals("")){
 
             camposValidados = false;
-        }else if((pGasolina == null || pGasolina.equals("")){
+
+        }else if(pGasolina == null || pGasolina.equals("")){
             camposValidados = false;
         }
 
         return camposValidados;
     }
+
+
 }
