@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         editTextAlcool.setText("");
         editTextGasolina.setText("");
         textResultado.setText("");
-        textResultado.setText("Resultado");
+        textResultado.setText("Após informar os valores, clique em CALCULAR!");
     }
 
     public void calcularPreco(View view){
